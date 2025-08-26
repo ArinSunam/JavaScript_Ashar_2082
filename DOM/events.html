@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+
+  <body style="background-color: #414141; color: aliceblue">
+    <h2>Images</h2>
+
+    <div>
+      <ul id="images">
+        <li>
+          <img
+            width="250px"
+            height="250px"
+            id="sassy"
+            alt="sassy"
+            src="https://images.pexels.com/photos/29734037/pexels-photo-29734037/free-photo-of-modern-elegance-in-salem-fashion-on-capitol-steps.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          />
+        </li>
+
+        <li>
+          <img
+            width="250px"
+            height="250px"
+            id="pancake"
+            alt="pancake"
+            src="https://images.pexels.com/photos/30206964/pexels-photo-30206964/free-photo-of-delicious-blueberry-pastry-with-cream-topping.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          />
+        </li>
+
+        <li>
+          <img
+            width="250px"
+            height="250px"
+            id="flowers"
+            alt="flowers"
+            src="https://images.pexels.com/photos/30201143/pexels-photo-30201143/free-photo-of-vibrant-bouquet-of-orange-dahlias-in-hanoi.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          />
+        </li>
+
+        <li>
+          <img
+            width="250px"
+            height="250px"
+            id="beach"
+            alt="beach"
+            src="https://images.pexels.com/photos/28768323/pexels-photo-28768323/free-photo-of-silhouette-of-a-person-running-on-the-beach-at-sunset.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"
+          />
+        </li>
+
+        <button
+          style="
+            margin-top: 20px;
+            padding: 8px;
+            color: white;
+            border-radius: 4px;
+            background-color: red;
+          "
+        >
+          Delete all
+        </button>
+      </ul>
+    </div>
+  </body>
+
+  <script>
+    const ul = document.querySelector("#images");
+    console.log("ul::", ul);
+
+    ul.addEventListener("click", (e) => {
+      console.log("targeted element::", e.target.tagName);
+
+      const itemToRemove = e.target.parentNode;
+
+      if (e.target.tagName === "IMG") itemToRemove.remove();
+    });
+  </script>
+</html>

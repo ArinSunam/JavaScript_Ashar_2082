@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Day 2 of DOM</title>
+  </head>
+  <body>
+    <div id="greetings">
+      Hel
+      <button
+        style="
+          margin-top: 20px;
+          padding: 8px;
+          color: white;
+          border-radius: 4px;
+          background-color: red;
+        "
+      >
+        Delete all</button
+      >lo world
+    </div>
+    <ul>
+      <li class="student">Hrit</li>
+      <li class="student">Russel</li>
+      <li class="student">Rahul</li>
+    </ul>
+
+    <input type="text" />
+    <input type="password" />
+    <input type="text" />
+  </body>
+
+  <script>
+    const greetings = document.querySelector("#greetings");
+    // const list = document.querySelectorAll("li");
+    const list = document.getElementsByClassName("student");
+    console.log("list::", list);
+    const newList = Array.from(list);
+
+    console.log("newList::", newList);
+
+    newList.forEach((el) => (el.style.color = "green"));
+
+    // const input = document.querySelectorAll("input[class = text]");
+    // console.log("input::", input);
+    // greetings.className = "greet";
+    greetings.style.fontWeight = "bold";
+    greetings.style.fontSize = "24px";
+    greetings.style.backgroundColor = "#999";
+    greetings.setAttribute("class", "meow");
+    console.log(greetings.getAttribute("class"));
+
+    list.forEach((li) => {
+      li.style.color = "orange";
+    });
+
+    console.log("greetings::", greetings.outerHTML);
+  </script>
+</html>
