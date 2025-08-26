@@ -10,9 +10,9 @@ To run most of the code examples:
 
 1.  Clone the repository:
     ```bash
-    git clone <your-repo-url>
+    git clone git@github.com:ArinSunam/JavaScript_Ashar_2082.git
     ```
-2.  Navigate to a specific topic folder.
+2.  Navigate to a specific topic folder/file.
 3.  Open the HTML files in a browser (for DOM examples) or run JS files with Node.js:
     ```bash
     node filename.js
