@@ -2,8 +2,6 @@
 
 > This repository contains the core JavaScript curriculum for the MERN Stack Bootcamp. It covers everything from fundamentals to advanced topics like asynchronous programming, OOP, and DOM manipulation.
 
-## 📁 Repository Structure
-
 ## 🚀 Getting Started
 
 To run most of the code examples:
